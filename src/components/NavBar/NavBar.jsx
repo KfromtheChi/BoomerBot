@@ -40,7 +40,6 @@ export default function NavBar({ user, setUser }) {
       </div>
       {isMenuOpen && (
         <div className="menu">
-          <h1>User Settings</h1>
           <ul>
             <li>Chat Log</li>
             <li>Settings</li>
