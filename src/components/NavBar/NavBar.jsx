@@ -18,6 +18,10 @@ export default function NavBar({ user, setUser }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   }
 
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <nav>
       <Link to="/orders">Order History</Link>
@@ -28,6 +32,20 @@ export default function NavBar({ user, setUser }) {
       <span>Welcome, {user.name}</span>
       {/* logout link - onClick prop and event handler */}
       &nbsp;&nbsp; <Link to="" onClick={handleLogOut}>Log Out</Link>
+      &nbsp;&nbsp;
+      <div className="menu-icon" onClick={openMenu}>
+        ☰
+      </div>
+      {isMenuOpen && (
+        <div className='menu'>
+          <h1>User Settings</h1>
+          <ul>
+            <li>Update Name</li>
+            <li>Change Password</li>
+            <li>Delete Account</li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
