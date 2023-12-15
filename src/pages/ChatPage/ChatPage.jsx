@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MessagePane from './MessagePane';
 import ChatPane from './ChatPane';
+import './ChatPage.css';
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([]);

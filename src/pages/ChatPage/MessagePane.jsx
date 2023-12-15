@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './MessagePane.css';
 
 export default function MessagePane({ onSendMessage }) {
   const [message, setMessage] = useState('');
@@ -17,7 +18,7 @@ export default function MessagePane({ onSendMessage }) {
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type your message..."
+        placeholder="Message BoomerBot..."
       />
       <button type="submit">Ask</button>
     </form>
