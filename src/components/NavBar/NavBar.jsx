@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import "./NavBar.css";
 // import logout
-import * as usersService from '../../utilities/users-service';
-
+import * as usersService from "../../utilities/users-service";
 
 // render user's name in Nav Bar - 2. pass user prop and destructure NavBar function
 // for logout - destructure NavBar and pass setUser
@@ -14,6 +15,12 @@ export default function NavBar({ user, setUser }) {
     setUser(null);
   }
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav>
       <Link to="/orders">Order History</Link>
@@ -23,7 +30,28 @@ export default function NavBar({ user, setUser }) {
       {/* render user's name in Nav Bar - 3. render the user */}
       <span>Welcome, {user.name}</span>
       {/* logout link - onClick prop and event handler */}
-      &nbsp;&nbsp; <Link to="" onClick={handleLogOut}>Log Out</Link>
+      &nbsp;&nbsp;{" "}
+      <Link to="" onClick={handleLogOut}>
+        Log Out
+      </Link>
+      &nbsp;&nbsp;
+      <div className="menu-icon" onClick={openMenu}>
+        ☰
+      </div>
+      {isMenuOpen && (
+        <div className="menu">
+          <h1>User Settings</h1>
+          <ul>
+            <li>Chat Log</li>
+            <li>Settings</li>
+            <li>
+              <Link to="" onClick={handleLogOut}>
+                Log Out
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
