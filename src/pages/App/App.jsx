@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 // set user state
 import { getUser } from '../../utilities/users-service';
 import './App.css';
-import AuthPage from '../AuthPage/AuthPage';
+import LoginPage from '../LoginPage/LoginPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
@@ -28,7 +28,7 @@ export default function App() {
           </>
           :
           // update user state defined in App from SignUpForm - setUser as a prop
-          <AuthPage setUser={setUser} />
+          <LoginPage setUser={setUser} />
       }
     </main>
   );
