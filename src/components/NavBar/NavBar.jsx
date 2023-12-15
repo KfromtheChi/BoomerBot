@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
 // import logout
 import * as usersService from '../../utilities/users-service';
 
@@ -12,6 +13,9 @@ export default function NavBar({ user, setUser }) {
     usersService.logOut();
     // update state, this causes a re-render
     setUser(null);
+  }
+  const menu = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
   }
 
   return (
