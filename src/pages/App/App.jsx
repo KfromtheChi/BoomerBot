@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import LoginPage from '../LoginPage/LoginPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
+import ChatPage from '../ChatPage/ChatPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -21,7 +21,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* Route components in here */}
-              <Route path="/orders/new" element={<NewOrderPage />} />
+              <Route path="/" element={<ChatPage />} />
               <Route path="/orders" element={<OrderHistoryPage />} />
               
             </Routes>

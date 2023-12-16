@@ -1,0 +1,22 @@
+.chat-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh; /* Use viewport height to make chat page take up most of the window */
+    max-width: 768px;
+    margin: 0 auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+/* Additional global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+}
