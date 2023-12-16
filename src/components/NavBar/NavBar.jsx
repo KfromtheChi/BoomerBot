@@ -43,7 +43,9 @@ export default function NavBar({ user, setUser }) {
           <h1>User Settings</h1>
           <ul>
             <li>Chat Log</li>
-            <li>Settings</li>
+            <li>
+              <Link to="/settings">Settings</Link>
+            </li>
             <li>
               <Link to="" onClick={handleLogOut}>
                 Log Out
