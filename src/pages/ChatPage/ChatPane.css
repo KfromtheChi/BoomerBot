@@ -1,0 +1,27 @@
+.chat-pane {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+  display: block;
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: white;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.message.ai {
+  background-color: #f1f1f1;
+  color: black;
+  margin-left: 10px;
+}
