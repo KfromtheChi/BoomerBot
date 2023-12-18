@@ -27,14 +27,13 @@ export default function NavBar({ user, setUser }) {
   };
 
   return (
-    <nav>
-      {/* render user's name in Nav Bar - 3. render the user */}
-      <span>Welcome, {user.name}</span>
-      {/* logout link - onClick prop and event handler */}
-      
+    <nav className="navbar">
       &nbsp;&nbsp;
       <div className="menu-icon" onClick={openMenu}>
         ☰
+      </div>
+      <div className="user-info">
+        <span>Welcome, {user.name}</span>
       </div>
       {isMenuOpen && (
         <div className="menu">
