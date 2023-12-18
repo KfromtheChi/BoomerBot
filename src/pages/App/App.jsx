@@ -4,7 +4,6 @@ import { getUser } from '../../utilities/users-service';
 import './App.css';
 import LoginPage from '../LoginPage/LoginPage';
 import ChatPage from '../ChatPage/ChatPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import ChangeNamePage from '../../components/NavBar/UserSettings/ChangeNamePage';
 import ChangePasswordPage from '../../components/NavBar/UserSettings/ChangePasswordPage';
@@ -20,8 +19,6 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Outlet />
           <Routes>
-            <Route path="/" element={<ChatPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
             <Route path="/settings">
               <Route index element={<SettingsPage />} />
               <Route path="change-name" element={<ChangeNamePage />} />
