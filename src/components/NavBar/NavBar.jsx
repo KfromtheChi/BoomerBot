@@ -31,10 +31,7 @@ export default function NavBar({ user, setUser }) {
       {/* render user's name in Nav Bar - 3. render the user */}
       <span>Welcome, {user.name}</span>
       {/* logout link - onClick prop and event handler */}
-      &nbsp;&nbsp;{" "}
-      <Link to="" onClick={handleLogOut}>
-        Log Out
-      </Link>
+      
       &nbsp;&nbsp;
       <div className="menu-icon" onClick={openMenu}>
         ☰
