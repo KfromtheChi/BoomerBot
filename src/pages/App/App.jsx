@@ -1,35 +1,47 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-// set user state
+import { Routes, Route, Outlet } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import LoginPage from '../LoginPage/LoginPage';
 import ChatPage from '../ChatPage/ChatPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+import ChangeNamePage from '../../components/NavBar/UserSettings/ChangeNamePage';
+import ChangePasswordPage from '../../components/NavBar/UserSettings/ChangePasswordPage';
+import DeleteAccountPage from '../../components/NavBar/UserSettings/DeleteAccountPage';
 
 export default function App() {
-  // set user state
   const [user, setUser] = useState(getUser());
-  
+
   return (
     <main className="App">
-      { user ?
+      {user ? (
         <>
-          {/* render user's name in Nav Bar - 1. pass user prop to Nav Bar and set value to user state */}
-          {/* for logout - pass setUser from App to NavBar prop */}
           <NavBar user={user} setUser={setUser} />
-            <Routes>
-              {/* Route components in here */}
-              <Route path="/" element={<ChatPage />} />
-              <Route path="/orders" element={<OrderHistoryPage />} />
-              
-            </Routes>
-          </>
-          :
-          // update user state defined in App from SignUpForm - setUser as a prop
-          <LoginPage setUser={setUser} />
-      }
+          <Outlet />
+          <Routes>
+            <Route path="/" element={<ChatPage />} />
+            <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/settings">
+              <Route index element={<SettingsPage />} />
+              <Route path="change-name" element={<ChangeNamePage />} />
+              <Route path="change-password" element={<ChangePasswordPage />} />
+              <Route path="delete-account" element={<DeleteAccountPage />} />
+            </Route>
+          </Routes>
+        </>
+      ) : (
+        <LoginPage setUser={setUser} />
+      )}
     </main>
+  );
+}
+
+function SettingsPage() {
+  return (
+    <div>
+      <h1>Settings</h1>
+      {/* You can add additional content for the main settings page here */}
+    </div>
   );
 }

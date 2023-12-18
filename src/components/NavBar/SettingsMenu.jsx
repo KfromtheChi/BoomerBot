@@ -35,12 +35,6 @@ export default function SettingsMenu() {
           </li>
         </ul>
       </nav>
-
-      <Routes>
-        <Route path="/settings/change-name" element={<ChangeNamePage />} />
-        <Route path="/settings/change-password" element={<ChangePasswordPage />} />
-        <Route path="/settings/delete-account" element={<DeleteAccountPage />} />
-      </Routes>
     </div>
   );
 }
