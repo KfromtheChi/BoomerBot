@@ -5,10 +5,10 @@ const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 // ...
 
-const geminiModel = genAI.getGenerativeModel({ model: "gemini-pro-vision"});
+const geminiModel = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 // ...
 module.exports = {
   genAI,
   geminiModel,
-}
+};

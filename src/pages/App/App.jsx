@@ -9,6 +9,7 @@ import ChangeNamePage from '../../components/NavBar/UserSettings/ChangeNamePage'
 import ChangePasswordPage from '../../components/NavBar/UserSettings/ChangePasswordPage';
 import DeleteAccountPage from '../../components/NavBar/UserSettings/DeleteAccountPage';
 
+
 export default function App() {
   const [user, setUser] = useState(getUser());
 
@@ -17,6 +18,7 @@ export default function App() {
       {user ? (
         <>
           <NavBar user={user} setUser={setUser} />
+          <ChatPage />
           <Outlet />
           <Routes>
             <Route path="/settings">
