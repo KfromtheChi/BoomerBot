@@ -8,3 +8,4 @@ const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 const model = genAI.getGenerativeModel({ model: "MODEL_NAME"});
 
 // ...
+module.exports = genAI;
