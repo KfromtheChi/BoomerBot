@@ -28,10 +28,6 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/orders">Order History</Link>
-      &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
-      &nbsp;&nbsp;
       {/* render user's name in Nav Bar - 3. render the user */}
       <span>Welcome, {user.name}</span>
       {/* logout link - onClick prop and event handler */}
