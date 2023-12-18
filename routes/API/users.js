@@ -15,4 +15,8 @@ router.post('/login', usersCtrl.login);
 // POST /user/create user - signup
 router.post('/', usersCtrl.create);
 
+// PUT /api/users/change-name - change name
+router.put('/change-name', ensureLoggedIn, usersCtrl.changeName);
+
+
 module.exports = router;

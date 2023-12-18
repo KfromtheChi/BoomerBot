@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import LoginPage from '../LoginPage/LoginPage';
 import ChatPage from '../ChatPage/ChatPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import ChangeNamePage from '../../components/NavBar/UserSettings/ChangeNamePage';
 import ChangePasswordPage from '../../components/NavBar/UserSettings/ChangePasswordPage';
@@ -18,12 +17,17 @@ export default function App() {
       {user ? (
         <>
           <NavBar user={user} setUser={setUser} />
-          <Outlet />
           <Routes>
-            <Route path="/" element={<ChatPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
-            <Route path="/settings">
-              <Route index element={<SettingsPage />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <ChatPage />
+                  <Outlet />
+                </>
+              }
+            />
+            <Route path="/settings/*" element={<SettingsPage />} > 
               <Route path="change-name" element={<ChangeNamePage />} />
               <Route path="change-password" element={<ChangePasswordPage />} />
               <Route path="delete-account" element={<DeleteAccountPage />} />
@@ -40,8 +44,7 @@ export default function App() {
 function SettingsPage() {
   return (
     <div>
-      <h1>Settings</h1>
-      {/* You can add additional content for the main settings page here */}
+      <Outlet />
     </div>
   );
 }
