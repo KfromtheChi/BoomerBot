@@ -17,6 +17,7 @@ export default function App() {
       {user ? (
         <>
           <NavBar user={user} setUser={setUser} />
+          <ChatPage />
           <Outlet />
           <Routes>
             <Route path="/settings">
