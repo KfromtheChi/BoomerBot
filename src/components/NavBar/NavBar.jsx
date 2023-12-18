@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./NavBar.css";
 // import logout
 import * as usersService from "../../utilities/users-service";
+import SettingsMenu from './SettingsMenu';
 
 // render user's name in Nav Bar - 2. pass user prop and destructure NavBar function
 // for logout - destructure NavBar and pass setUser
@@ -19,6 +20,10 @@ export default function NavBar({ user, setUser }) {
 
   const openMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const openSettingsMenu = () => {
+    setIsMenuOpen(true);
   };
 
   return (
@@ -42,7 +47,9 @@ export default function NavBar({ user, setUser }) {
         <div className="menu">
           <ul>
             <li>Chat Log</li>
-            <li>Settings</li>
+            <li onClick={openSettingsMenu}>
+              {isMenuOpen && <SettingsMenu />}
+            </li>
             <li>
               <Link to="" onClick={handleLogOut}>
                 Log Out
