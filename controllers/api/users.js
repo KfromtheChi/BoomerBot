@@ -10,11 +10,24 @@ module.exports = {
     login,
     checkToken,
     changeName,
-    delete: deleteUser
+    delete: deleteAccount
 };
 
 
-// delete user
+// delete user 
+async function deleteAccount(req, res) {
+    try {
+        // find user by id
+        const user = await User.findById(req.user._id);
+        // delete user
+        await user.remove();
+        // send back a 200 status
+        res.status(200).json('User Deleted');
+    } catch (err) {
+        // send back a 400 status
+        res.status(400).json(err);
+    }
+}                                                
 
 // change name
 async function changeName(req, res) {
@@ -25,8 +38,10 @@ async function changeName(req, res) {
         user.name = req.body.name;
         // save user
         await user.save();
+        console.log('user', user);
         // create a new token
         const token = createJWT(user);
+        console.log('token', token);
         // send it back to the client
         res.json(token);
     } catch (err) {

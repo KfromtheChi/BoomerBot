@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { changeName } from '../../../utilities/users-api';
+import { changeName } from '../../../utilities/users-service';
 
 //name page functionality
-export default function ChangeNamePage() {
+export default function ChangeNamePage({setUser}) {
     const [newName, setNewName] = useState('');
     const [message, setMessage] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
@@ -19,12 +19,12 @@ export default function ChangeNamePage() {
         // Call API to change name
         // await api.changeName(newName)
         try {
-            await changeName(newName);
-            // update state
+            const user = await changeName(newName);
             setNewName(newName);
+            setUser(user);
             setSuccessMessage('Your name has been changed!');
             setErrorMessage('');
-        } catch (err) {
+        } catch (error) {
             setErrorMessage('Change of name failed.');
             setSuccessMessage('');
         }

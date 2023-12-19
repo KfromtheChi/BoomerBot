@@ -28,7 +28,7 @@ export default function App() {
               }
             />
             <Route path="/settings/*" element={<SettingsPage />} > 
-              <Route path="change-name" element={<ChangeNamePage />} />
+              <Route path="change-name" element={<ChangeNamePage setUser={setUser} />} />
               <Route path="change-password" element={<ChangePasswordPage />} />
               <Route path="delete-account" element={<DeleteAccountPage />} />
             </Route>
