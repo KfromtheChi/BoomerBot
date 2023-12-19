@@ -35,9 +35,8 @@ const ChatPage = () => {
       // Update the state with the AI's response
       setMessages((prevMessages) => [
         ...prevMessages,
-        { from: "ai", text: aiResponse.text },
+        { from: "ai", text: aiResponse },
       ]);
-      setAiResponse(aiResponse);
     } catch (error) {
       console.error("Error sending message to Gemini API:", error);
     }
