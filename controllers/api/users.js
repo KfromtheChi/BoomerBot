@@ -10,7 +10,7 @@ module.exports = {
     login,
     checkToken,
     changeName,
-    delete: deleteAccount
+    deleteAccount
 };
 
 
