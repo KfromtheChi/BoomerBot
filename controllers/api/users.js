@@ -38,10 +38,8 @@ async function changeName(req, res) {
         user.name = req.body.name;
         // save user
         await user.save();
-        console.log('user', user);
         // create a new token
         const token = createJWT(user);
-        console.log('token', token);
         // send it back to the client
         res.json(token);
     } catch (err) {

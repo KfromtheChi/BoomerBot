@@ -19,8 +19,10 @@ export default function ChangeNamePage({setUser}) {
         // Call API to change name
         // await api.changeName(newName)
         try {
+            // Call changeName to initiate the name change process and update in real time
             const user = await changeName(newName);
             setNewName(newName);
+            // Update the user info in state (App)
             setUser(user);
             setSuccessMessage('Your name has been changed!');
             setErrorMessage('');

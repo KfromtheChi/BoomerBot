@@ -29,7 +29,8 @@ export default function App() {
               }
             />
             <Route path="/settings/*" element={<SettingsPage />} > 
-              <Route path="change-name" element={<ChangeNamePage setUser={setUser} />} />
+              {/* call setUser to update the user info ie change name in real time */}
+              <Route path="change-name" element={<ChangeNamePage setUser={setUser} />} /> 
               <Route path="change-password" element={<ChangePasswordPage />} />
               <Route path="delete-account" element={<DeleteAccountPage />} />
             </Route>
