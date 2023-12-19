@@ -39,7 +39,7 @@ export default function DeleteAccountPage() {
             {showConfirmation && (
             <form action="" method="POST">
                 <h4>Are you sure you want to delete your account?</h4>
-                <input type="submit" value="Yes - Delete!" class="btn" />
+                <button type="submit" value="Yes - Delete!" class="btn">Yes - Delete!</button>
                 <button type="button" onClick={handleCancel}>Cancel</button>
             </form>
             )}
