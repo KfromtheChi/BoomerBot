@@ -8,25 +8,26 @@ body {
   margin: 0;
 }
 
+/* LoginPage.css */
+
 .login-page {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0; /* Set your desired background color */
+  background: url('../../../public/BoomerBotBg2.png') center/cover no-repeat; /* Set your background image */
 }
 
 .login-container {
   text-align: center;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  font-size: 2em;
-  color: #333; /* Set your logo color */
+  max-width: 200px; /* Set your logo maximum width */
   margin-bottom: 20px;
 }
 
