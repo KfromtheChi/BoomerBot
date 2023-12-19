@@ -30,10 +30,18 @@ export async function changeName(newName) {
   return getUser();
 }
 
+// change password
+export async function changePassword(newPassword) {
+  const token = await usersAPI.changePassword(newPassword);
+  localStorage.setItem('token', token);
+  return getUser();
+}
+
 // delete account
 export async function deleteAccount() {
   const response = await usersAPI.deleteAccount();
   localStorage.removeItem('token');
+  return response;
 }
 
 // Set userState when page is loaded or refreshed
