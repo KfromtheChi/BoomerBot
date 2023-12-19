@@ -8,82 +8,38 @@ body {
   margin: 0;
 }
 
-.login-page-container {
-  /* background-image: url('https://t4.ftcdn.net/jpg/06/66/64/25/240_F_666642585_IDwqaBFAsgrhckWLGRT45WaHXQrJQM2f.jpg'); */
-  height: 100vh;
-  background-size:cover;
-  background-position: center;
+.login-page {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Set your desired background color */
 }
 
-.login-header {
-  position: fixed;
-  top: 50px;
-  font-family: 'Quicksand', sans-serif;
-  color: #fff;
+.login-container {
   text-align: center;
-  font-size: 2.5em;
-  font-weight: normal;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-detail-container {
-  position: fixed;
-  background-color: hsla(201, 100%, 6%, 0.6);
-  padding: 50px 30px;
-  min-width: 400px;
-  width: 50%;
-  max-width: 600px;
-}
-
-.login-title {
-  color: #fff;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 40px;
-  font-size: 2.5em;
-  font-weight: normal;
-}
-
-.enter-username {
-  display: flex;
-  flex-direction: column;
+.logo {
+  font-size: 2em;
+  color: #333; /* Set your logo color */
   margin-bottom: 20px;
 }
 
-.enter-username label {
-  color: #fff;
-  font-weight: lighter;
-  font-size: 1.5em;
-  margin-bottom: 7px;
-}
-
-.enter-username input {
-  font-size: 1.5em;
-  padding: 0.1em 0.25em;
-  background-color: hsla(201, 100%, 91%, 0.3);
-  border: 1px solid hsl(201, 100%, 6%);
-  outline: none;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: lighter;
-}
-
-.input-group input:focus {
-  border: 1px solid hsl(201, 100%, 50%);
-}
-
-.login-button {
-  padding: 10px 30px;
-  width: 100%;
-  border-radius: 5px;
-  background: hsla(200, 6%, 57%, 0.1);
-  border: 1px solid hsl(201, 100%, 50%);
-  outline: none;
-  font-size: 1.5em;
-  color: #fff;
-  font-weight: lighter;
-  margin-top: 20px;
+button {
+  background-color: #4caf50; /* Set your button color */
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #45a049; /* Set your button hover color */
 }
