@@ -9,13 +9,13 @@ async function askGemini(req, res) {
     // Use genAI to interact with the GoogleGenerativeAI model
     const model = genAI.geminiModel;
     const result = await model.generateContent(prompt);
-    const response = await result.response;
+    const response =  result.response;
     const text = response.text();
     console.log(text);
 
 
     // Handle the result and send the response
-    res.json({ response: result.response.text() });
+    res.json(text) 
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });

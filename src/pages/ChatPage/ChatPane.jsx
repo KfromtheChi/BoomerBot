@@ -1,7 +1,7 @@
-import React from 'react';
-import './ChatPane.css';
+import React from "react";
+import "./ChatPane.css";
 
-export default function ChatPane({ messages }) {
+export default function ChatPane({ messages, aiResponse }) {
   return (
     <div className="chat-pane">
       {messages.map((msg, index) => (
@@ -9,6 +9,7 @@ export default function ChatPane({ messages }) {
           <div className="message-content">{msg.text}</div>
         </div>
       ))}
+      {aiResponse && <div className="message ai message-content">{aiResponse}</div>}
     </div>
   );
-};
+}
