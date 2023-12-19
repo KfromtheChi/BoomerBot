@@ -33,7 +33,7 @@ app.use("/api/gemini", require("./routes/API/geminiRoutes"));
 
 // Put API routes here, before the "catch all" route
 app.use("/API/users", require("./routes/API/users"));
-
+// this suck
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests
 app.get("/*", function (req, res) {
