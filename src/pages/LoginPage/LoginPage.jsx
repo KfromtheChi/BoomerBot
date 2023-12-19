@@ -13,7 +13,7 @@ export default function LoginPage({ setUser }) {
   return (
     <main className="login-page">
       <div className="login-container">
-        <img src="./BoomerBotLogo1.png" alt="" className="logo" />
+        <img src="./logo.png" alt="" className="logo" />
         {login ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
         <p>
           {login ? "Don't have an account? " : "Already have an account? "}

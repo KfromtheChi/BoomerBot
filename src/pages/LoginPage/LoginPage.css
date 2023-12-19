@@ -6,6 +6,7 @@
 html,
 body {
   margin: 0;
+ 
 }
 
 .login-page {
@@ -13,26 +14,44 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('../../../public/BoomerBotBg2.png') center/cover; /* Use a space-themed background image */
+  background: url('../../../public/image.png') center/cover; /* Use a space-themed background image */
+}
+.login-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+  z-index: 1; /* Adjust the z-index to control the overlay's stacking order */
 }
 
 .login-container {
+  position: relative;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.67);
   color: #ffffff; /* White text color */
+  position: relative; /* Make sure it has a positioning context */
+  z-index: 2;
 }
 
+
 .logo {
-  max-width: 200px; /* Set your logo maximum width */
+   /* Set your logo maximum width */
   margin-bottom: 20px;
+  max-width: 100px; /* Adjust the maximum width as needed */
+  border-radius: 50%; /* Make it round */
+  overflow: hidden; /* Hide overflowing content if the image is not perfectly square */
 }
+
 
 button {
   background-color: #6c5ce7; /* Vibrant purple button color */
-  color: #ffffff;
+  color: #f1ecec;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
