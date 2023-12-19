@@ -8,8 +8,48 @@ const bcrypt = require('bcrypt');
 module.exports = {
     create,
     login,
-    checkToken
+    checkToken,
+    changeName,
+    delete: deleteAccount
 };
+
+
+// delete user 
+async function deleteAccount(req, res) {
+    try {
+        // find user by id
+        const user = await User.findById(req.user._id);
+        // delete user
+        await user.remove();
+        // send back a 200 status
+        res.status(200).json('User Deleted');
+    } catch (err) {
+        // send back a 400 status
+        res.status(400).json(err);
+    }
+}                                                
+
+// change name
+async function changeName(req, res) {
+    try {
+        // find user by id
+        const user = await User.findById(req.user._id);
+        // update name
+        user.name = req.body.name;
+        // save user
+        await user.save();
+        console.log('user', user);
+        // create a new token
+        const token = createJWT(user);
+        console.log('token', token);
+        // send it back to the client
+        res.json(token);
+    } catch (err) {
+        if (!req.body.name) {
+            return res.status(400).json(err);
+        }
+    }
+}
 
 // check login button
 function checkToken(req, res) {

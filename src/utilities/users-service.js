@@ -23,6 +23,13 @@ export function logOut() {
   localStorage.removeItem('token');
 }
 
+// chang name
+export async function changeName(newName) {
+  const token = await usersAPI.changeName(newName);
+  localStorage.setItem('token', token); 
+  return getUser();
+}
+
 // Set userState when page is loaded or refreshed
 
 export function getToken() {

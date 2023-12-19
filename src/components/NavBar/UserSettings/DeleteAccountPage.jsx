@@ -1,7 +1,7 @@
 export default function DeleteAccountPage() {
     return (
-        <div>
-            <h1>Delete Account Page</h1>
+        <div class="delete-account">
+            <h1>Delete User Account</h1>
         </div>
     );
 };
