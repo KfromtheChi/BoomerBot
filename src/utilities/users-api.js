@@ -18,5 +18,5 @@ export function checkToken() {
 
 // change name - handles the name change request
 export function changeName(newName) {
-  return sendRequest(`${BASE_URL}/change-name`, 'PUT', { name: newName })
+  return sendRequest(`${BASE_URL}/changeName`, 'PUT', { name: newName })
 };
