@@ -13,14 +13,12 @@ code {
 }
 /* CSS Custom Properties */
 :root {
-  --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
+  --primary-bg: #0f0f0f;  /* Black */
+  --secondary-bg: #1c1c1c;  /* Dark Gray */
+  --accent-color: #ffcc00;  /* Gold */
+  --text-light: #e6e6e6;  /* Light Gray */
+  --text-dark: #151515;  /* Gray */
+  --button-hover: #333333;  /* Darker Gray */
 }
 
 *, *:before, *:after {

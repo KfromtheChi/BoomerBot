@@ -3,6 +3,7 @@ import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import './LoginPage.css'; // Import your custom styles for LoginPage
 
+
 export default function LoginPage({ setUser }) {
   const [login, setLogin] = useState(true);
   const toggleForm = () => {
@@ -12,7 +13,7 @@ export default function LoginPage({ setUser }) {
   return (
     <main className="login-page">
       <div className="login-container">
-        <img src="your-logo.png" alt="Logo" className="logo" />
+        <img src="./BoomerBotLogo1.png" alt="" className="logo" />
         {login ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
         <p>
           {login ? "Don't have an account? " : "Already have an account? "}
