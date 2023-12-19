@@ -30,6 +30,12 @@ export async function changeName(newName) {
   return getUser();
 }
 
+// delete account
+export async function deleteAccount() {
+  const response = await usersAPI.deleteAccount();
+  localStorage.removeItem('token');
+}
+
 // Set userState when page is loaded or refreshed
 
 export function getToken() {

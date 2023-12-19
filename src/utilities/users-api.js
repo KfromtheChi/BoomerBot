@@ -20,3 +20,8 @@ export function checkToken() {
 export function changeName(newName) {
   return sendRequest(`${BASE_URL}/changeName`, 'PUT', { name: newName })
 };
+
+// delete account - handles the delete account request by deleting the users id
+export function deleteAccount(userId) {
+  return sendRequest(`${BASE_URL}/deleteAccount`, 'DELETE')
+};
