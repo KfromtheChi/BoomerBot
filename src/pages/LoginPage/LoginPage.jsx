@@ -12,7 +12,7 @@ export default function LoginPage({ setUser }) {
 
   return (
     <main className="login-page">
-      <div className="login-container">
+      <div className="login-notworking">
         <img src="./logo.png" alt="" className="logo" />
         {login ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
         <p>

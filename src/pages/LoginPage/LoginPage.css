@@ -1,12 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 html,
 body {
   margin: 0;
- 
 }
 
 .login-page {
@@ -14,7 +13,7 @@ body {
   align-items: center;
   justify-content: left;
   height: 100vh;
-  background: url('../../../public/image.png') center/cover; /* Use a space-themed background image */
+  background: url("../../../public/image.png") center/cover; /* Use a space-themed background image */
 }
 .login-page::before {
   content: "";
@@ -27,7 +26,7 @@ body {
   z-index: 1; /* Adjust the z-index to control the overlay's stacking order */
 }
 
-.login-container {
+.login-notworking {
   position: relative;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.673); /* Semi-transparent dark background */
@@ -40,15 +39,13 @@ body {
   z-index: 2;
 }
 
-
 .logo {
-   /* Set your logo maximum width */
+  /* Set your logo maximum width */
   margin-bottom: 20px;
   max-width: 100px; /* Adjust the maximum width as needed */
   border-radius: 50%; /* Make it round */
   overflow: hidden; /* Hide overflowing content if the image is not perfectly square */
 }
-
 
 button {
   background-color: #ffffff; /* Vibrant purple button color */
