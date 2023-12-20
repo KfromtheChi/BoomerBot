@@ -30,23 +30,6 @@ export default function NavBar({ user, setUser }) {
       <div className="user-info">
         <span>Welcome, {user.name}</span>
       </div>
-<<<<<<< HEAD
-      {isMenuOpen && (
-        <div className="menu">
-          <ul>
-            <li>
-              <Link to="/chat-logs">Chat Log</Link>
-            </li>
-            <li onClick={openSettingsMenu}>
-              {isMenuOpen && <SettingsMenu />}
-            </li>
-            <li>
-              <Link to="" onClick={handleLogOut}>
-                Log Out
-              </Link>
-            </li>
-          </ul>
-=======
       <div className="menu-icon" onClick={openMenu}>
         ☰
       </div>
@@ -64,7 +47,6 @@ export default function NavBar({ user, setUser }) {
         </ul>
         <div className="close-button" onClick={closeMenu}>
           Close Menu
->>>>>>> 840f75d0f96611ea7c9e3b941c2795a4ffa9b670
         </div>
       </div>
     </nav>
