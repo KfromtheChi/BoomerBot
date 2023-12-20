@@ -21,35 +21,16 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <ChatPage />
-                  <Outlet />
-                </>
-              }
-            />
-            <Route path="/settings/*" element={<SettingsPage />} > 
-              {/* call setUser for change name/password/delete account to update the user's name in real time */}
-              <Route path="about" element={<AboutPage />} />
-              <Route path="change-name" element={<ChangeNamePage setUser={setUser} />} />
-              <Route path="change-password" element={<ChangePasswordPage setUser={setUser} />} />
-              <Route path="delete-account" element={<DeleteAccountPage setUser={setUser} />} />
-            </Route>
+            <Route path="/" element={<ChatPage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="change-name" element={<ChangeNamePage setUser={setUser} />} />
+            <Route path="change-password" element={<ChangePasswordPage setUser={setUser} />} />
+            <Route path="delete-account" element={<DeleteAccountPage setUser={setUser} />} />
           </Routes>
         </>
       ) : (
         <LoginPage setUser={setUser} />
       )}
     </main>
-  );
-}
-
-function SettingsPage() {
-  return (
-    <div>
-      <Outlet />
-    </div>
   );
 }

@@ -7,22 +7,12 @@ import DeleteAccountPage from './UserSettings/DeleteAccountPage';
 
 
 export default function SettingsMenu() {
-  const [isNestedMenuOpen, setIsNestedMenuOpen] = useState(false);
-
-  const openNestedMenu = () => {
-    setIsNestedMenuOpen(!isNestedMenuOpen);
-  };
 
   return (
     <div>
       <nav>
         <ul>
-          <li>
-            <Link to="/" onClick={openNestedMenu}>
-              Settings
-            </Link>
-            {isNestedMenuOpen && (
-              <ul>
+            <ul>
                 <li>
                   <Link to="/settings/about">About</Link>
                 </li>
@@ -36,8 +26,6 @@ export default function SettingsMenu() {
                   <Link to="/settings/delete-account">Delete Account</Link>
                 </li>
               </ul>
-            )}
-          </li>
         </ul>
       </nav>
     </div>

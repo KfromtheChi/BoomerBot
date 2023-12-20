@@ -20,10 +20,6 @@ export default function NavBar({ user, setUser }) {
     setIsMenuOpen(false);
   };
 
-  const openSettingsMenu = () => {
-    setIsMenuOpen(true);
-  };
-
   return (
     <nav id='' className={`navbar ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="user-info">
@@ -34,9 +30,25 @@ export default function NavBar({ user, setUser }) {
       </div>
       <div className="menu">
         <ul>
-          <li>Chat Log</li>
-          <li onClick={openSettingsMenu}>
-            {isMenuOpen && <SettingsMenu />}
+          <li>
+            <Link to="/about" onClick={closeMenu}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/change-name" onClick={closeMenu}>
+              Change Name
+            </Link>
+          </li>
+          <li>
+            <Link to="/change-password" onClick={closeMenu}>
+              Change Password
+            </Link>
+          </li>
+          <li>
+            <Link to="/delete-account" onClick={closeMenu}>
+              Delete Account
+            </Link>
           </li>
           <li>
             <Link to="" onClick={handleLogOut}>
