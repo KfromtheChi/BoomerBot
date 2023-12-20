@@ -29,7 +29,7 @@ export default function DeleteAccountPage({ setUser }) {
 
     // const handleCancel = async (evt) => {
     //     evt.preventDefault();
-    //     // Redirect to the user settings page
+    //     // Redirect to the user settings page      // onClick={() => evt.preventDefault()}
     //     navigate('/DeleteAccountPage');
     // }
 

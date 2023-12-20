@@ -35,12 +35,15 @@ async function changePassword(req, res) {
     try {
         // find user by id
         const user = await User.findById(req.user._id);
-        // compare old password to new password
-        const match = await bcrypt.compare(req.body.oldPassword, user.password);
+        // update password
+        user.password = req.body.newPassword;
         // if passwords match
         if (match) {
+            // hash new password
+            const salt = await bcrypt.genSalt(10);
+            const hashedPassword = await bcrypt.hash(req.body.newPassword, salt);
             // update password
-            user.password = req.body.newPassword;
+            user.password = hashedPasswords;
             // save user
             await user.save();
             // create a new token
