@@ -3,17 +3,21 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { deleteAccount } from '../../../utilities/users-service';
 
-export default function DeleteAccountPage({setUser}) {
+export default function DeleteAccountPage({ setUser }) {
     // Show the confirmation form when delete button is clicked
     const [showConfirmation, setShowConfirmation] = useState(false);
     const navigate = useNavigate();
 
+    const handleConfirmation = () => {
+        setShowConfirmation(true);
+    };
+
     const handleDelete = async (evt) => {
         evt.preventDefault();
-        setShowConfirmation(true);
         // allow account to be deleted in this page by calling the deleteAccount API
         const response = await deleteAccount();
-        if (response.ok) {
+        console.log(response);
+        if (response === "User Deleted") {
             setUser(null);
             // Redirect to the login page
             navigate('/');
@@ -36,15 +40,15 @@ export default function DeleteAccountPage({setUser}) {
     return (
         <div className="delete-account">
             <h1>Delete User Account</h1>
-            <button type="submit" onClick={handleDelete}>Delete</button>
+            <button type="submit" onClick={handleConfirmation}>Delete</button>
 
-                {showConfirmation && (
-                    <form action="" method="DELETE">
-                        <h4>Are you sure you want to delete your account?</h4>
-                        <button type="submit">Yes - Delete!</button>  
-                        <button type="button" onClick={handleCancel}>Cancel</button>
-                    </form>
-                )}
+            {showConfirmation && (
+            <form action="" method="DELETE" onSubmit={handleDelete}>
+                <h4>Are you sure you want to delete your account?</h4>
+                <button type="submit">Yes - Delete!</button>
+                <button type="button" onClick={handleCancel}>Cancel</button>
+            </form>
+            )}
         </div>
     );
 };
