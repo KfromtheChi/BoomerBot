@@ -31,8 +31,8 @@ export async function changeName(newName) {
 }
 
 // change password
-export async function changePassword(newPassword) {
-  const token = await usersAPI.changePassword(newPassword);
+export async function updatePassword(newPassword) {
+  const token = await usersAPI.updatePassword(newPassword);
   localStorage.setItem('token', token);
   return getUser();
 }

@@ -10,10 +10,9 @@ module.exports = {
     login,
     checkToken,
     changeName,
-    changePassword,
+    updatePassword,
     deleteAccount
 };
-
 
 // delete user 
 async function deleteAccount(req, res) {
@@ -31,19 +30,19 @@ async function deleteAccount(req, res) {
 }
 
 // change password
-async function changePassword(req, res) {
+async function updatePassword(req, res) {
     try {
         // find user by id
         const user = await User.findById(req.user._id);
-        // update password
-        user.password = req.body.newPassword;
+        // check if old password matches the current one
+        const match = await bcrypt.compare(req.body.oldPassword, user.password);
         // if passwords match
         if (match) {
             // hash new password
-            const salt = await bcrypt.genSalt(10);
-            const hashedPassword = await bcrypt.hash(req.body.newPassword, salt);
+            // const salt = await bcrypt.genSalt(10);
+            // const hashedPassword = await bcrypt.hash(req.body.newPassword, salt);
             // update password
-            user.password = hashedPasswords;
+            user.password = hashedPassword;
             // save user
             await user.save();
             // create a new token
@@ -51,14 +50,13 @@ async function changePassword(req, res) {
             // send it back to the client
             res.json(token);
         } else {
-            // if passwords don't match
-            throw new Error();
+            // if passwords don't match return an error
+            res.status(400).json({ error: 'Old password does not match' });
         }
     } catch (err) {
-        // if old password doesn't match
-        if (!req.body.oldPassword) {
+        // handle errors
+        console.error('Error changing password')
             return res.status(400).json(err);
-        }
     }
 }
 
@@ -122,9 +120,9 @@ async function create(req, res) {
 /*-- JWT Helper Functions for user sign-up and login --*/
 function createJWT(user) {
     return jwt.sign(
-        // data payload
-        { user },
-        process.env.SECRET,
-        { expiresIn: '24h' }
+    // data payload
+    { user },
+    process.env.SECRET,
+    { expiresIn: '24h' }
     );
 }

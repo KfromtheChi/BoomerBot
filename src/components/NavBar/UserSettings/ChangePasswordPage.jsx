@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { changePassword } from '../../../utilities/users-service';
+import { updatePassword } from '../../../utilities/users-service';
 
-//change password page functionality
-export default function ChangePasswordPage({setUser}) {
+//change password page functionality - responsible for taking new password and sending it to the server.
+export default function ChangePasswordPage({ setUser }) {
     const [newPassword, setNewPassword] = useState('');
     const [message, setMessage] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
@@ -19,7 +19,7 @@ export default function ChangePasswordPage({setUser}) {
         // Call API to change password
         try {
             // Call changePassword to initiate the name change process and update in real time
-            const user = await changePassword(newPassword);
+            const user = await updatePassword(newPassword);
             // Clear password field
             setNewPassword('');
             // Update the user info in state (App)

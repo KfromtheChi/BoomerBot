@@ -22,8 +22,8 @@ export function changeName(newName) {
 };
 
 // change password - handles the password change request
-export function changePassword(newPassword) {
-  return sendRequest(`${BASE_URL}/changePassword`, 'PUT', { password: newPassword })
+export function updatePassword(newPassword) {
+  return sendRequest(`${BASE_URL}/updatePassword`, 'PUT', { password: newPassword })
 };
 
 // delete account - handles the delete account request by deleting the users id
