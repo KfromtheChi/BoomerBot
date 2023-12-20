@@ -8,6 +8,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import ChangeNamePage from '../../components/NavBar/UserSettings/ChangeNamePage';
 import ChangePasswordPage from '../../components/NavBar/UserSettings/ChangePasswordPage';
 import DeleteAccountPage from '../../components/NavBar/UserSettings/DeleteAccountPage';
+import ChatLogsPage from '../../components/NavBar/ChatLogsPage';
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
                 </>
               }
             />
+            <Route path="/chat-logs" element={<ChatLogsPage />} />
             <Route path="/settings/*" element={<SettingsPage />} > 
               {/* call setUser for change name to update the user's name in real time */}
               <Route path="change-name" element={<ChangeNamePage setUser={setUser} />} />

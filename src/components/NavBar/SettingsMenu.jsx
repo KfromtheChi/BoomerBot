@@ -16,9 +16,9 @@ export default function SettingsMenu() {
       <nav>
         <ul>
           <li>
-            <Link to="/" onClick={openNestedMenu}>
+            <li onClick={openNestedMenu}>
               Settings
-            </Link>
+            </li>
             {isNestedMenuOpen && (
               <ul>
                 <li>

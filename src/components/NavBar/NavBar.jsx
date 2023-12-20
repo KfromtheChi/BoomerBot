@@ -4,6 +4,7 @@ import "./NavBar.css";
 // import logout
 import * as usersService from "../../utilities/users-service";
 import SettingsMenu from './SettingsMenu';
+import ChatLogs from './ChatLogsPage';
 
 // render user's name in Nav Bar - 2. pass user prop and destructure NavBar function
 // for logout - destructure NavBar and pass setUser
@@ -38,7 +39,9 @@ export default function NavBar({ user, setUser }) {
       {isMenuOpen && (
         <div className="menu">
           <ul>
-            <li>Chat Log</li>
+            <li>
+              <Link to="/chat-logs">Chat Log</Link>
+            </li>
             <li onClick={openSettingsMenu}>
               {isMenuOpen && <SettingsMenu />}
             </li>
