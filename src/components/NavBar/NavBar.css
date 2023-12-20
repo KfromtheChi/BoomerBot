@@ -22,7 +22,8 @@
   transition: left 0.3s ease-in-out; /* Slide animation */
   display: flex;
   flex-direction: column;
-  padding-top: 60px; /* Adjust the padding based on your design */
+  padding-top: 60px;
+  z-index: 2; /* Adjust the padding based on your design */
 }
 
 .menu-open .menu {
@@ -73,5 +74,6 @@
   position: fixed;
   right: 10px;
   color: rgb(0, 0, 0);
-  text-align: right; /* Align text to the right */
+  text-align: right;
+  z-index: 2; /* Align text to the right */
 }
