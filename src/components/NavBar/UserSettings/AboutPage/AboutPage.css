@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-align: left;
+}
+
+p {
+    font-size: 1.2em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+
+.about-page {
+    background: url('../../../../../public/image.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.about-page::before {
+    content: "";
+    position: fixed;
+    top: 35px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.about-section {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.673);
+    display: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 300px;
+    padding-left: 100px;
+    padding-right: 100px;
+    left: 400px;
+    right: 400px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.creators {
+    text-decoration: underline;
+    color: #ffffff
+}
