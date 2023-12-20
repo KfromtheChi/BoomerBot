@@ -31,6 +31,7 @@ async function deleteAccount(req, res) {
 
 // change password
 async function updatePassword(req, res) {
+    console.log('req.body', req.body);
     try {
         // find user by id
         const user = await User.findById(req.user._id);
@@ -38,17 +39,16 @@ async function updatePassword(req, res) {
         const match = await bcrypt.compare(req.body.oldPassword, user.password);
         // if passwords match
         if (match) {
+            user.password = req.body.newPassword
             // hash new password
-            // const salt = await bcrypt.genSalt(10);
-            // const hashedPassword = await bcrypt.hash(req.body.newPassword, salt);
             // update password
-            user.password = hashedPassword;
             // save user
             await user.save();
             // create a new token
             const token = createJWT(user);
             // send it back to the client
             res.json(token);
+            console.log(user);
         } else {
             // if passwords don't match return an error
             res.status(400).json({ error: 'Old password does not match' });
@@ -111,6 +111,7 @@ async function create(req, res) {
         const token = createJWT(user);
         // send back the token string
         res.json(token);
+        console.log("user created", user)
     } catch (err) {
         // Client will check for non-2xx statis code, 400 = bad request
         res.status(400).json(err);
