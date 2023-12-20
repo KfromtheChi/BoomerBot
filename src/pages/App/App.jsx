@@ -31,9 +31,9 @@ export default function App() {
             />
             <Route path="/chat-logs" element={<ChatLogsPage />} />
             <Route path="/settings/*" element={<SettingsPage />} > 
-              {/* call setUser for change name to update the user's name in real time */}
+              {/* call setUser for change name/password/delete account to update the user's name in real time */}
               <Route path="change-name" element={<ChangeNamePage setUser={setUser} />} />
-              <Route path="change-password" element={<ChangePasswordPage />} />
+              <Route path="change-password" element={<ChangePasswordPage setUser={setUser} />} />
               <Route path="delete-account" element={<DeleteAccountPage setUser={setUser} />} />
             </Route>
           </Routes>

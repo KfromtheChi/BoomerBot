@@ -10,6 +10,7 @@ module.exports = {
     login,
     checkToken,
     changeName,
+    changePassword,
     deleteAccount
 };
 
@@ -27,7 +28,36 @@ async function deleteAccount(req, res) {
         // send back a 400 status
         res.status(400).json(err);
     }
-}                                                
+}
+
+// change password
+async function changePassword(req, res) {
+    try {
+        // find user by id
+        const user = await User.findById(req.user._id);
+        // compare old password to new password
+        const match = await bcrypt.compare(req.body.oldPassword, user.password);
+        // if passwords match
+        if (match) {
+            // update password
+            user.password = req.body.newPassword;
+            // save user
+            await user.save();
+            // create a new token
+            const token = createJWT(user);
+            // send it back to the client
+            res.json(token);
+        } else {
+            // if passwords don't match
+            throw new Error();
+        }
+    } catch (err) {
+        // if old password doesn't match
+        if (!req.body.oldPassword) {
+            return res.status(400).json(err);
+        }
+    }
+}
 
 // change name
 async function changeName(req, res) {

@@ -8,13 +8,14 @@ export default function DeleteAccountPage() {
     const [showConfirmation, setShowConfirmation] = useState(false);
     const navigate = useNavigate();
 
-    const handleDelete = async (evt) => {
+    const handleDelete = (evt) => {
+        evt.preventDefault();
         setShowConfirmation(true);
         // allow account to be deleted in this page by calling the deleteAccount API
-        const response = await deleteAccount();
+        const response = deleteAccount();
         if (response.ok) {
             // Redirect to the login page
-            navigate.push('/LoginPage');
+            navigate('/');
         } else {
             // Handle errors
             console.log('Error deleting account');
@@ -37,9 +38,9 @@ export default function DeleteAccountPage() {
             <button type="submit" onClick={handleDelete}>Delete</button>
 
             {showConfirmation && (
-            <form action="" method="POST">
+            <form action="" method="DELETE">
                 <h4>Are you sure you want to delete your account?</h4>
-                <button type="submit" value="Yes - Delete!" class="btn">Yes - Delete!</button>
+                <button type="submit">Yes - Delete!</button>
                 <button type="button" onClick={handleCancel}>Cancel</button>
             </form>
             )}
