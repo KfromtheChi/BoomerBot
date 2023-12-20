@@ -8,8 +8,76 @@ const bcrypt = require('bcrypt');
 module.exports = {
     create,
     login,
-    checkToken
+    checkToken,
+    changeName,
+    changePassword,
+    deleteAccount
 };
+
+
+// delete user 
+async function deleteAccount(req, res) {
+    try {
+        // find user by id
+        const user = await User.findById(req.user._id);
+        // delete user
+        await user.remove();
+        // send back a 200 status
+        res.status(200).json('User Deleted');
+    } catch (err) {
+        // send back a 400 status
+        res.status(400).json(err);
+    }
+}
+
+// change password
+async function changePassword(req, res) {
+    try {
+        // find user by id
+        const user = await User.findById(req.user._id);
+        // compare old password to new password
+        const match = await bcrypt.compare(req.body.oldPassword, user.password);
+        // if passwords match
+        if (match) {
+            // update password
+            user.password = req.body.newPassword;
+            // save user
+            await user.save();
+            // create a new token
+            const token = createJWT(user);
+            // send it back to the client
+            res.json(token);
+        } else {
+            // if passwords don't match
+            throw new Error();
+        }
+    } catch (err) {
+        // if old password doesn't match
+        if (!req.body.oldPassword) {
+            return res.status(400).json(err);
+        }
+    }
+}
+
+// change name
+async function changeName(req, res) {
+    try {
+        // find user by id
+        const user = await User.findById(req.user._id);
+        // update name
+        user.name = req.body.name;
+        // save user
+        await user.save();
+        // create a new token
+        const token = createJWT(user);
+        // send it back to the client
+        res.json(token);
+    } catch (err) {
+        if (!req.body.name) {
+            return res.status(400).json(err);
+        }
+    }
+}
 
 // check login button
 function checkToken(req, res) {

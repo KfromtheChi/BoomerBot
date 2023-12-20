@@ -15,4 +15,15 @@ router.post('/login', usersCtrl.login);
 // POST /user/create user - signup
 router.post('/', usersCtrl.create);
 
+// PUT /api/users/change name
+router.put('/changeName', ensureLoggedIn, usersCtrl.changeName);
+
+// PUT /api/users/change password
+router.put('/changePassword', ensureLoggedIn, usersCtrl.changePassword);
+
+// DELETE /api/user/:id - delete user
+router.delete('/:id', ensureLoggedIn, usersCtrl.deleteAccount);
+
+
+
 module.exports = router;

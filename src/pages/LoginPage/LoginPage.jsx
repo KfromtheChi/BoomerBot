@@ -4,6 +4,7 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 import './LoginPage.css'; // Import your custom styles for LoginPage
 
 
+// update user state defined in App from LoginForm - setUser as a prop
 export default function LoginPage({ setUser }) {
   const [login, setLogin] = useState(true);
   const toggleForm = () => {

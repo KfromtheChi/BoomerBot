@@ -36,7 +36,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.67);
   color: #ffffff; /* White text color */
-  position: relative; /* Make sure it has a positioning context */
   z-index: 2;
 }
 

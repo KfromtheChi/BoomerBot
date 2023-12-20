@@ -15,3 +15,18 @@ export function login(credentials) {
 export function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
+
+// change name - handles the name change request
+export function changeName(newName) {
+  return sendRequest(`${BASE_URL}/changeName`, 'PUT', { name: newName })
+};
+
+// change password - handles the password change request
+export function changePassword(newPassword) {
+  return sendRequest(`${BASE_URL}/changePassword`, 'PUT', { password: newPassword })
+};
+
+// delete account - handles the delete account request by deleting the users id
+export function deleteAccount(userId) {
+  return sendRequest(`${BASE_URL}/deleteAccount`, 'DELETE')
+};
