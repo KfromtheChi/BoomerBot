@@ -3,17 +3,22 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { deleteAccount } from '../../../utilities/users-service';
 
-export default function DeleteAccountPage() {
+export default function DeleteAccountPage({ setUser }) {
     // Show the confirmation form when delete button is clicked
     const [showConfirmation, setShowConfirmation] = useState(false);
     const navigate = useNavigate();
 
-    const handleDelete = (evt) => {
-        evt.preventDefault();
+    const handleConfirmation = () => {
         setShowConfirmation(true);
+    };
+
+    const handleDelete = async (evt) => {
+        evt.preventDefault();
         // allow account to be deleted in this page by calling the deleteAccount API
-        const response = deleteAccount();
-        if (response.ok) {
+        const response = await deleteAccount();
+        console.log(response);
+        if (response === "User Deleted") {
+            setUser(null);
             // Redirect to the login page
             navigate('/');
         } else {
@@ -35,10 +40,10 @@ export default function DeleteAccountPage() {
     return (
         <div className="delete-account">
             <h1>Delete User Account</h1>
-            <button type="submit" onClick={handleDelete}>Delete</button>
+            <button type="submit" onClick={handleConfirmation}>Delete</button>
 
             {showConfirmation && (
-            <form action="" method="DELETE">
+            <form action="" method="DELETE" onSubmit={handleDelete}>
                 <h4>Are you sure you want to delete your account?</h4>
                 <button type="submit">Yes - Delete!</button>
                 <button type="button" onClick={handleCancel}>Cancel</button>
