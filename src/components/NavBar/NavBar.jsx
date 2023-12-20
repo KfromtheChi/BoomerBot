@@ -1,19 +1,13 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./NavBar.css";
-// import logout
 import * as usersService from "../../utilities/users-service";
 import SettingsMenu from './SettingsMenu';
 import ChatLogs from './ChatLogsPage';
 
-// render user's name in Nav Bar - 2. pass user prop and destructure NavBar function
-// for logout - destructure NavBar and pass setUser
 export default function NavBar({ user, setUser }) {
-  // logout function
   function handleLogOut() {
-    // delegate to the users-service
     usersService.logOut();
-    // update state, this causes a re-render
     setUser(null);
   }
 
@@ -23,19 +17,20 @@ export default function NavBar({ user, setUser }) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const openSettingsMenu = () => {
     setIsMenuOpen(true);
   };
 
   return (
-    <nav className="navbar">
-      &nbsp;&nbsp;
-      <div className="menu-icon" onClick={openMenu}>
-        ☰
-      </div>
+    <nav id='' className={`navbar ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="user-info">
         <span>Welcome, {user.name}</span>
       </div>
+<<<<<<< HEAD
       {isMenuOpen && (
         <div className="menu">
           <ul>
@@ -51,8 +46,27 @@ export default function NavBar({ user, setUser }) {
               </Link>
             </li>
           </ul>
+=======
+      <div className="menu-icon" onClick={openMenu}>
+        ☰
+      </div>
+      <div className="menu">
+        <ul>
+          <li>Chat Log</li>
+          <li onClick={openSettingsMenu}>
+            {isMenuOpen && <SettingsMenu />}
+          </li>
+          <li>
+            <Link to="" onClick={handleLogOut}>
+              Log Out
+            </Link>
+          </li>
+        </ul>
+        <div className="close-button" onClick={closeMenu}>
+          Close Menu
+>>>>>>> 840f75d0f96611ea7c9e3b941c2795a4ffa9b670
         </div>
-      )}
+      </div>
     </nav>
   );
 }

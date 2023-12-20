@@ -20,7 +20,8 @@ export default function ChangePasswordPage({setUser}) {
         try {
             // Call changePassword to initiate the name change process and update in real time
             const user = await changePassword(newPassword);
-            setNewPassword(newPassword);
+            // Clear password field
+            setNewPassword('');
             // Update the user info in state (App)
             setUser(user);
             setSuccessMessage('Your password has been changed!');
@@ -38,7 +39,7 @@ export default function ChangePasswordPage({setUser}) {
             <form onSubmit={handleSubmit}>
                 <label>
                     New Password:
-                    <input type="text" value={newPassword} onChange={handleChange} />
+                    <input type="password" value={newPassword} onChange={handleChange} />
                 </label>
                 <button type="submit">Change Password</button>
             </form>
