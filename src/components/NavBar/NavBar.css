@@ -4,6 +4,7 @@
   margin-right: 950px;
   position: fixed;
   transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+  z-index: 3;
 }
 
 .menu-open .menu-icon {

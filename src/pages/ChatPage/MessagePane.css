@@ -1,8 +1,8 @@
 .message-pane {
-    display: flex;
-    padding: 10px;
-    border-top: 1px solid #e0e0e0;
-    background-color: #fafafa;
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #fafafa;
 }
 
 .message-pane input {
@@ -14,7 +14,7 @@
   outline: none;
 }
 
-.message-pane button {
+.buttonpane {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -22,6 +22,7 @@
   color: white;
   cursor: pointer;
   outline: none;
+  width: 100px;
 }
 
 .message-pane button:hover {

@@ -1,15 +1,13 @@
 .changeName {
   display: grid;
   justify-content: center;
-
 }
-form {
+.formchange {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 300px;
-  
 }
 
 h1 {
@@ -23,7 +21,7 @@ label {
   color: #333;
 }
 
-input {
+.inputchange {
   width: 40vb;
   padding: 8px;
   margin-top: 4px;

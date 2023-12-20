@@ -20,7 +20,7 @@ export default function MessagePane({ onSendMessage }) {
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Message BoomerBot..."
       />
-      <button type="submit">Ask</button>
+      <button type="submit" className='buttonpane'>Ask</button>
     </form>
   );
 };
