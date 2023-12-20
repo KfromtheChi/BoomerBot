@@ -1,25 +1,30 @@
 .changeName {
   display: grid;
   justify-content: center;
+  margin-top: 15em;
 }
 .formchange {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 300px;
+  width: 35em;
 }
 
 h1 {
   color: #333;
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
 
 label {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #333;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .inputchange {
   width: 40vb;
@@ -38,7 +43,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 94%;
+  width: 100%;
 }
 
 button:hover {

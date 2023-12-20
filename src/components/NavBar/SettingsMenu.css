@@ -1,0 +1,10 @@
+.menu-link {
+    text-decoration: none; 
+    color: #ffffff; 
+    display: block; 
+    padding: 8px; 
+  }
+  
+  .menu-link:hover {
+    background-color: #eee;
+  }
