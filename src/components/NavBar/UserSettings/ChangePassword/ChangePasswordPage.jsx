@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { changePassword } from '../../../../utilities/users-service';
+import './ChangePassword.css'
 
 //change password page functionality
 export default function ChangePasswordPage({setUser}) {
@@ -34,17 +35,20 @@ export default function ChangePasswordPage({setUser}) {
 
     // change password form
     return (
-        <div>
-            <h1>Change Password</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    New Password:
-                    <input type="password" value={newPassword} onChange={handleChange} />
-                </label>
-                <button type="submit">Change Password</button>
-            </form>
-            {successMessage && <div className="success-message">{successMessage}</div>}
-            {errorMessage && <div className="error-message">{errorMessage}</div>}
+    <div className="form-container">
+        <div className="changePassword">
+            <div className="password-form">
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        Type New Password Below:
+                        <input type="password" className="inputchange" value={newPassword} onChange={handleChange} />
+                    </label>
+                    <button type="submit">Change Password</button>
+                </form>
+                {successMessage && <div className="success-message">{successMessage}</div>}
+                {errorMessage && <div className="error-message">{errorMessage}</div>}
+            </div>
         </div>
+    </div>
     );
 };
