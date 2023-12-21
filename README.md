@@ -4,10 +4,10 @@
 
 ### December 20, 2023
 
-[GitHub](
+[GitHub](https://github.com/KfromtheChi)
 
 
-![BBLogo](<img width="902" alt="Screenshot 2023-12-21 at 6 31 35 AM" src="https://github.com/KfromtheChi/BoomerBot/assets/145854969/6beb7cf0-365f-46ca-952f-9d3eaeed3453">)
+                           ![BBLogo](https://github.com/KfromtheChi/BoomerBot/assets/145854969/6beb7cf0-365f-46ca-952f-9d3eaeed3453)
 
 
 ## Description
