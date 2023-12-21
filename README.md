@@ -6,7 +6,7 @@
 
 [GitHub](https://github.com/KfromtheChi)
 
-                                                                      ![BB logo](<img width="175" alt="image" src="https://github.com/KfromtheChi/BoomerBot/assets/145854969/65673db8-636f-45fd-b332-dcb0128280a1">)
+                                                                      ![BB logo](<img width="175" alt="image" src="assets/145854969/65673db8-636f-45fd-b332-dcb0128280a1">)
 
 
 ## Description
