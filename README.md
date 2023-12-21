@@ -1,12 +1,10 @@
-# Project 3: BoomerBot
+# Project 4: BoomerBot
 
 ## By Nisal Attanayake, Krystalin Castillo, Adriana Saavedra, Ahmad Wali
 
 ### December 20, 2023
 
-[GitHub](https://github.com/KfromtheChi)
-
-                                                                      ![BB logo](<img width="175" alt="image" src="assets/145854969/65673db8-636f-45fd-b332-dcb0128280a1">)
+[GitHub](<img width="902" alt="Screenshot 2023-12-21 at 6 31 35 AM" src="https://github.com/KfromtheChi/BoomerBot/assets/145854969/6beb7cf0-365f-46ca-952f-9d3eaeed3453">)
 
 
 ## Description
@@ -18,9 +16,9 @@ What do you get when 3 Gen-Z and 1 Millenial come together to create something: 
 
 ### Coding Challenges
 1. Chat logs for user chat history - and sadly they have become a stretch goal.
-2. 
-3. 
-4.
+2. Training the AI - back-end especially.
+3. Chang password due to b-crypt, password hashing, and jwt token existance.
+4. Multi-turn convos which allows the AI to be trained to save chat convos in its history for reference with the user and to just pick up where the last chat left off.
 
 
 ## Technologies Used:
