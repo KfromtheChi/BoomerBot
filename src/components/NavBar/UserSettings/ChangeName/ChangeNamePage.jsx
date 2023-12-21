@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { changeName } from "../../../utilities/users-service";
+import { changeName } from "../../../../utilities/users-service";
 import "./ChangeName.css";
 
 //name page functionality
@@ -35,24 +35,28 @@ export default function ChangeNamePage({ setUser }) {
 
   // change name form
   return (
+    <div className="name-container">
     <div className="changeName">
-      <h1>Change Name</h1>
-      <form onSubmit={handleSubmit} className="formchange">
-        <label>
-          New Name:
+      <div className="form-detail">
+      <h2 className="change-name">Change Name</h2>
+      <form onSubmit={handleSubmit} className="form-change">
+        <label className="name-label">
+          Enter New Name:
           <input
             type="text"
             value={newName}
             onChange={handleChange}
-            className="inputchange"
+            className="input-change"
           />
         </label>
-        <button type="submit" >Update Name</button>
+        <button className="update-name" type="submit" >Update Name</button>
       </form>
       {successMessage && (
         <div className="success-message">{successMessage}</div>
       )}
       {errorMessage && <div className="error-message">{errorMessage}</div>}
+    </div>
+    </div>
     </div>
   );
 }

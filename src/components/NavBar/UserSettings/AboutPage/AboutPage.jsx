@@ -5,21 +5,21 @@ export default function AboutPage() {
     <div className="about-page">
       <div className="about-section">
         <div className="aboutdetail">
-          <h1 className="abouth1">ABOUT</h1>
+          <h2 className="abouth1">ABOUT</h2>
           <p className="aboutP">
             Developers-in-the-making from General Assembly's Software
-            Engineering Immersive program created this web application to help
-            seniors everywhere get used to the ever-changing world of
-            technology. Ask it, snap it, and your AI response will be granted.
-            Cheers to learning anything and everything. We hope that you and
-            your Boomers, whoever they may be, enjoy our site!
+            Engineering Immersive program present BoomerBot, a chatbot application that talks to users 
+            as if they were speaking to a Boomer. Ask it questions, and the old-fashioned, grumpy 
+            AI will respond accordingly.
+            We hope that whoever you may be, you enjoy talking to BoomerBot!
+            <br/>______________________________
           </p>
           <div className="creators">
             <h2>CREATORS</h2>
-            <h3>Nisal Attanayake</h3>
-            <h3>Krystalin Castillo</h3>
-            <h3>Adriana Saavedra</h3>
             <h3>Ahmad Wali</h3>
+            <h3>Adriana Saavedra</h3>
+            <h3>Krystalin Castillo</h3>
+            <h3>Nisal Attanayake</h3>
             <img src="../logo.png" alt="" className="logo" />
           </div>
         </div>

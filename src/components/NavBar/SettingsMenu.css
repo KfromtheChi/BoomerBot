@@ -1,0 +1,21 @@
+/* .menu-link {
+    text-decoration: none; 
+    color: #ffffff; 
+    display: block; 
+    padding: 8px; 
+  }
+  
+  .menu-link:hover {
+    background-color: #eee;
+  } */
+
+.menu-link,
+.menu-link:link,
+.menu-link:visited,
+.menu-link:hover,
+.menu-link:active,
+.menu-link:focus {
+    color: white; /* Sets the text color to white /
+    text-decoration: none; / Removes underline from links /
+    / Add other styling as needed */
+}

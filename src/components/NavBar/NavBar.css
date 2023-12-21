@@ -41,6 +41,7 @@
   cursor: pointer;
   color: white;
   transition: background-color 0.3s;
+  text-decoration: none;
 }
 
 .menu li:hover {
@@ -75,4 +76,14 @@
   color: rgb(0, 0, 0);
   text-align: right;
   z-index: 2; /* Align text to the right */
+}
+
+.menu-link,
+.menu-link:link,
+.menu-link:visited,
+.menu-link:hover,
+.menu-link:active,
+.menu-link:focus {
+    color: white;
+    text-decoration: none;
 }
