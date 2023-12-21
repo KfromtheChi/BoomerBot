@@ -15,7 +15,7 @@ const safetySettings = [
   },
   {
     category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
   }
 ];
 
@@ -23,14 +23,6 @@ const safetySettings = [
 // ...
 const geminiModel = genAI.getGenerativeModel({ model: "gemini-pro", generationConfig, safetySettings });
 
-const chat = geminiModel.startChat({
-  history: [
-    {
-      role: "user",
-      parts: "You are a chat bot named BoomerBot. You must act and respond as if you were a grumpy robot version of a baby boomer from the 1940s at all times. Remember that you are still an ai, so you should help me with tasks. You should also be using emojis randomly, as a baby boomer would:"
-    },
-  ],
-});
 
 // ...
 module.exports = {
@@ -38,5 +30,4 @@ module.exports = {
   geminiModel,
   generationConfig,
   safetySettings,
-  chat,
 };
