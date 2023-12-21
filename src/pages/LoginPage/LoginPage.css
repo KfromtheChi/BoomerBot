@@ -48,7 +48,7 @@ body {
   overflow: hidden; /* Hide overflowing content if the image is not perfectly square */
 }
 
-button {
+login-btn {
   background-color: #ffffff; /* Vibrant purple button color */
   color: #010101;
   padding: 10px 15px;
@@ -56,8 +56,13 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-size: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   transition: background-color 0.3s ease-in-out;
+
 }
+
 
 button:hover {
   background-color: #007bff; /* Darker purple on hover */
