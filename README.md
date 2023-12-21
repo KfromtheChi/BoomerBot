@@ -1,4 +1,4 @@
-# Project 4: BoomerBot
+# BoomerBot
 
 ## By Nisal Attanayake, Krystalin Castillo, Adriana Saavedra, Ahmad Wali
 
@@ -7,11 +7,11 @@
 [GitHub](https://github.com/KfromtheChi)
 
 
-                           ![BBLogo](https://github.com/KfromtheChi/BoomerBot/assets/145854969/6beb7cf0-365f-46ca-952f-9d3eaeed3453)
+                                                   ![BBLogo](https://boomerbot-c3175a34bfb5.herokuapp.com/logo.png)
 
 
 ## Description
-What do you get when 3 Gen-Z and 1 Millenial come together to create something: the answer is BoomerBot!  BoomerBot is a chat web app where users can interact and have a conversation with their trusty Boomer AI.  Thats right!  The responses to user questions are AI generated.  Users can chat casually with BoomerBot or ask it serious questions for serious info!  With a Chat-GPT mock up in mind, the idea behind BoomerBot was to create a fun and useful chatsite, where the AI has been trained to respond to you like a Baby Boomer would...for the the added laughter of course.  Think Scrappy.  Think Simple and user-friendly.  New users can create an account and sign-up.  Existing users have a login.  Each user has a chat pane where they communicate with the AI.  Account options allow users to change their name, password, and delete their account also.  Fun fact: our super cool logo and background image were both created by AI!  Hoping everyone gets a kick out of BoomerBot as much as this group does.
+What do you get when 3 Gen-Z and 1 Millenial come together to create something: the answer is BoomerBot!  BoomerBot is a chat web app where users can interact and have a conversation with their trusty Boomer AI.  Thats right!  The responses to user questions are AI generated.  Users can chat casually with BoomerBot or ask it serious questions for serious info!  With a Chat-GPT mock up in mind, the idea behind BoomerBot was to create a fun and useful chatsite, where the AI has been trained to respond to you like a Baby Boomer would...for the the added laughter of course.  Think Scrappy.  Think Simple and User-Friendly.  New users can create an account and sign-up.  Existing users have a login.  Each user has a chat pane where they communicate with the AI.  Account options allow users to change their name, password, and delete their account also.  Fun fact: our super cool logo and background image were both created by AI!  Hoping everyone gets a kick out of BoomerBot as much as this group does.
  
 
 ![bbicinaction]()
