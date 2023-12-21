@@ -5,13 +5,14 @@ export default function AboutPage() {
     <div className="about-page">
       <div className="about-section">
         <div className="aboutdetail">
-          <h1 className="abouth1">ABOUT</h1>
+          <h2 className="abouth1">ABOUT</h2>
           <p className="aboutP">
             Developers-in-the-making from General Assembly's Software
             Engineering Immersive program present BoomerBot, a chatbot application that talks to users 
             as if they were speaking to a Boomer. Ask it questions, and the old-fashioned, grumpy 
             AI will respond accordingly.
             We hope that whoever you may be, you enjoy talking to BoomerBot!
+            <br/>______________________________
           </p>
           <div className="creators">
             <h2>CREATORS</h2>

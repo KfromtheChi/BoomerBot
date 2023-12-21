@@ -1,10 +1,10 @@
 .changeName {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   height: 100vh;
   background: url("../../../../../public/image.png") center/cover;
-  position: relative;
 }
 
 .changeName::before {
@@ -19,13 +19,15 @@
 }
 
 .form-detail {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background-color: #00000084;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(252, 252, 252, 0.488);
   padding: 20px;
   width: 80%;
   text-align: center;
+  align-items: center;
   position: absolute;
   z-index: 2;
   width: 40em;
@@ -33,28 +35,32 @@
   transform: translateX(-52%);
 }
 
-.formchange {
+.form-change {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #000000(0, 0, 0, 0);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 35em;
 }
 
-h2.changename {
+h2.change-name {
   text-align: center;
   color: white;
 }
 
-label {
-  color: #838383;
-  display: grid;
+label.name-label {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 
-.inputchange {
-  width: 560px; 
+.input-change {
+  width: 575px; 
   padding: 8px;
   margin-top: 12px;
   margin-bottom: 10px;
@@ -67,14 +73,14 @@ label {
   text-align: center; /* Align text content to the center */
 }
 
-button {
+button.update-name {
   background-color: #007bff;
   color: white;
   padding: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 560px;
+  width: 100%;
 }
 
 button:hover {
