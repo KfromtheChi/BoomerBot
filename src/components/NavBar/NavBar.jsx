@@ -31,6 +31,11 @@ export default function NavBar({ user, setUser }) {
       <div className="menu">
         <ul>
           <li>
+            <Link to="/" className="menu-link" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+          <li>
             <Link to="/about" className="menu-link" onClick={closeMenu}>
               About
             </Link>
