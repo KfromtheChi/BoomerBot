@@ -6,9 +6,9 @@ import LoginPage from '../LoginPage/LoginPage';
 import ChatPage from '../ChatPage/ChatPage';
 import NavBar from '../../components/NavBar/NavBar';
 import AboutPage from '../../components/NavBar/UserSettings/AboutPage/AboutPage'
-import ChangeNamePage from '../../components/NavBar/UserSettings/ChangeNamePage';
-import ChangePasswordPage from '../../components/NavBar/UserSettings/ChangePasswordPage';
-import DeleteAccountPage from '../../components/NavBar/UserSettings/DeleteAccountPage';
+import ChangeNamePage from '../../components/NavBar/UserSettings/ChangeName/ChangeNamePage';
+import ChangePasswordPage from '../../components/NavBar/UserSettings/ChangePassword/ChangePasswordPage';
+import DeleteAccountPage from '../../components/NavBar/UserSettings/DeleteAccount/DeleteAccountPage';
 
 
 

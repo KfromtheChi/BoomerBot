@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, Routes, Route } from 'react-router-dom';
 import AboutPage from './UserSettings/AboutPage/AboutPage';
-import ChangeNamePage from './UserSettings/ChangeNamePage';
-import ChangePasswordPage from './UserSettings/ChangePasswordPage';
-import DeleteAccountPage from './UserSettings/DeleteAccountPage';
+import ChangeNamePage from './UserSettings/ChangeName/ChangeNamePage';
+import ChangePasswordPage from './UserSettings/ChangePassword/ChangePasswordPage';
+import DeleteAccountPage from './UserSettings/DeleteAccount/DeleteAccountPage';
 import './SettingsMenu.css'
 
 

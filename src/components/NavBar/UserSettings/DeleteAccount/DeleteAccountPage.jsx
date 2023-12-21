@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // useNavigate() is a hook that allows us to navigate to a different route - part of the react router dom package, needed for delete account
 import { useNavigate } from 'react-router-dom';
-import { deleteAccount } from '../../../utilities/users-service';
+import { deleteAccount } from '../../../../utilities/users-service';
 
 export default function DeleteAccountPage({ setUser }) {
     // Show the confirmation form when delete button is clicked

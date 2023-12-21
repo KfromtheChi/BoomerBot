@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { changePassword } from '../../../utilities/users-service';
+import { changePassword } from '../../../../utilities/users-service';
 
 //change password page functionality
 export default function ChangePasswordPage({setUser}) {
