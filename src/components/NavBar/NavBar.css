@@ -77,3 +77,14 @@
   text-align: right;
   z-index: 2; /* Align text to the right */
 }
+
+.menu-link,
+.menu-link:link,
+.menu-link:visited,
+.menu-link:hover,
+.menu-link:active,
+.menu-link:focus {
+    color: white; /* Sets the text color to white /
+    text-decoration: none; / Removes underline from links /
+    / Add other styling as needed */
+}

@@ -31,27 +31,27 @@ export default function NavBar({ user, setUser }) {
       <div className="menu">
         <ul>
           <li>
-            <Link to="/about" onClick={closeMenu}>
+            <Link to="/about" className="menu-link" onClick={closeMenu}>
               About
             </Link>
           </li>
           <li>
-            <Link to="/change-name" onClick={closeMenu}>
+            <Link to="/change-name" className="menu-link" onClick={closeMenu}>
               Change Name
             </Link>
           </li>
           <li>
-            <Link to="/change-password" onClick={closeMenu}>
+            <Link to="/change-password" className="menu-link" onClick={closeMenu}>
               Change Password
             </Link>
           </li>
           <li>
-            <Link to="/delete-account" onClick={closeMenu}>
+            <Link to="/delete-account" className="menu-link" onClick={closeMenu}>
               Delete Account
             </Link>
           </li>
           <li>
-            <Link to="" onClick={handleLogOut}>
+            <Link to="" className="menu-link" onClick={handleLogOut}>
               Log Out
             </Link>
           </li>
