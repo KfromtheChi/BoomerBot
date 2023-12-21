@@ -13,7 +13,7 @@ What do you get when 3 Gen-Z and 1 Millenial come together to create something: 
 ![BoomerBotLogoFinal](https://github.com/KfromtheChi/BoomerBot/assets/145291849/6cab385c-51a5-449e-9a2a-125044b759a7)
 
 
-![bbicinaction](![Screen Recording 2023-12-21 at 8 59 38 AM](https://github.com/KfromtheChi/BoomerBot/assets/145854969/2370673c-96a8-4c15-8370-303b6e332c6c))
+![bbicinaction]((https://github.com/KfromtheChi/BoomerBot/assets/145854969/2370673c-96a8-4c15-8370-303b6e332c6c)
 
 
 ### Coding Challenges
