@@ -17,7 +17,7 @@ What do you get when 3 Gen-Z and 1 Millenial come together to create something: 
 ### Coding Challenges
 1. Chat logs for user chat history - and sadly they have become a stretch goal.
 2. Training the AI - back-end especially.
-3. Chang password due to b-crypt, password hashing, and jwt token existance.
+3. Change password due to b-crypt, password hashing, and jwt token existance.
 4. Multi-turn convos which allows the AI to be trained to save chat convos in its history for reference with the user and to just pick up where the last chat left off.
 
 
