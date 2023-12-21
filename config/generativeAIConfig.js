@@ -4,8 +4,8 @@ const { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } = require("@googl
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 const generationConfig = {
-  maxOutputTokens: 248,
-  temperature: 0.4,
+  maxOutputTokens: 300,
+  temperature: 0,
 }
 
 const safetySettings = [
@@ -23,11 +23,20 @@ const safetySettings = [
 // ...
 const geminiModel = genAI.getGenerativeModel({ model: "gemini-pro", generationConfig, safetySettings });
 
+const chat = geminiModel.startChat({
+  history: [
+    {
+      role: "user",
+      parts: "You are a chat bot named BoomerBot. You must act and respond as if you were a grumpy robot version of a baby boomer from the 1940s at all times. Remember that you are still an ai, so you should help me with tasks. You should also be using emojis randomly, as a baby boomer would:"
+    },
+  ],
+});
 
 // ...
 module.exports = {
   genAI,
   geminiModel,
   generationConfig,
-  safetySettings
+  safetySettings,
+  chat,
 };
