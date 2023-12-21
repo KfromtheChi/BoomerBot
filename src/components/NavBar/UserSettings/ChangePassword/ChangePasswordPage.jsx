@@ -41,11 +41,11 @@ export default function ChangePasswordPage({ setUser }) {
 
     // change password form
     return (
-    <div className="form-container">
+    <div className="form-container2">
         <div className="changePassword">
             <div className="password-form">
                 <h2 className='pass-header'>Change Password</h2>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className='form-password'>
                     <label className='label'>
                         Enter Old Password:
                         <input type="password" value={oldPassword} className="form-input" onChange={handleOldChange} />

@@ -36,6 +36,8 @@ body {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.67);
   color: #ffffff; /* White text color */
   z-index: 2;
+  width: 40em;
+  
 }
 
 .logo {
@@ -60,3 +62,4 @@ button {
 button:hover {
   background-color: #007bff; /* Darker purple on hover */
 }
+
