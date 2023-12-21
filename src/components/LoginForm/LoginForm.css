@@ -1,0 +1,11 @@
+login-container1 {
+    margin-left: 0px;
+    display: flex;
+    padding: 20px;
+}
+
+.login-btn {
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
