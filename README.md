@@ -12,8 +12,8 @@ What do you get when 3 Gen-Z and 1 Millenial come together to create something: 
 
 ![BoomerBotLogoFinal](https://github.com/KfromtheChi/BoomerBot/assets/145291849/6cab385c-51a5-449e-9a2a-125044b759a7)
 
+![Screen Recording 2023-12-21 at 8 59 38 AM](https://github.com/KfromtheChi/BoomerBot/assets/145854969/648369f0-5452-4b63-8847-159f1500368a)
 
-                ![BBinaction](
 ### Coding Challenges
 1. Chat logs for user chat history - and sadly they have become a stretch goal.
 2. Training the AI - back-end especially.
