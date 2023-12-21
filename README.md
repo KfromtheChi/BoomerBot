@@ -7,7 +7,7 @@
 [GitHub](https://github.com/KfromtheChi)
 
 
-                                                   ![BBLogo](https://boomerbot-c3175a34bfb5.herokuapp.com/logo.png)
+                                                   ![bb logo](https://boomerbot-c3175a34bfb5.herokuapp.com/logo.png)
 
 
 ## Description
