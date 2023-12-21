@@ -19,7 +19,7 @@ router.post('/', usersCtrl.create);
 router.put('/changeName', ensureLoggedIn, usersCtrl.changeName);
 
 // PUT /api/users/change password
-router.put('/changePassword', ensureLoggedIn, usersCtrl.changePassword);
+router.put('/updatePassword', ensureLoggedIn, usersCtrl.updatePassword);
 
 // DELETE /api/user/:id - delete user
 router.delete('/:id', ensureLoggedIn, usersCtrl.deleteAccount);

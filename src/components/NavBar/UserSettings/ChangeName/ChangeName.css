@@ -22,7 +22,6 @@
   display: grid;
   background-color: #00000084;
   border-radius: 8px;
-  margin-top: -8vh;
   box-shadow: 0 0 10px rgba(252, 252, 252, 0.488);
   padding: 20px;
   width: 80%;
@@ -38,18 +37,16 @@
   background-color: #000000(0, 0, 0, 0);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   width: 35em;
 }
 
-h1 {
-  color: #333;
+h2.changename {
   text-align: center;
-  padding-bottom: 20px;
+  color: white;
 }
 
 label {
-  color: #ffffff;
+  color: #838383;
   display: grid;
   justify-content: center;
   align-items: center;

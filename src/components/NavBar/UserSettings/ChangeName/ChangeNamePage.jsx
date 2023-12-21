@@ -38,6 +38,7 @@ export default function ChangeNamePage({ setUser }) {
     <div className="name-container">
     <div className="changeName">
       <div className="form-detail">
+      <h2 className="changename">Change Name</h2>
       <form onSubmit={handleSubmit} className="formchange">
         <label>
           Type A New Name:

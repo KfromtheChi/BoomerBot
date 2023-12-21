@@ -15,10 +15,10 @@ export default function AboutPage() {
           </p>
           <div className="creators">
             <h2>CREATORS</h2>
-            <h3>Nisal Attanayake</h3>
-            <h3>Krystalin Castillo</h3>
-            <h3>Adriana Saavedra</h3>
             <h3>Ahmad Wali</h3>
+            <h3>Adriana Saavedra</h3>
+            <h3>Krystalin Castillo</h3>
+            <h3>Nisal Attanayake</h3>
             <img src="../logo.png" alt="" className="logo" />
           </div>
         </div>
