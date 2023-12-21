@@ -84,7 +84,6 @@
 .menu-link:hover,
 .menu-link:active,
 .menu-link:focus {
-    color: white; /* Sets the text color to white /
-    text-decoration: none; / Removes underline from links /
-    / Add other styling as needed */
+    color: white;
+    text-decoration: none;
 }
