@@ -10,9 +10,9 @@
 ## Description
 What do you get when 3 Gen-Z and 1 Millenial come together to create something: the answer is BoomerBot!  BoomerBot is a chat web app where users can interact and have a conversation with their trusty Boomer AI.  Thats right!  The responses to user questions are AI generated.  Users can chat casually with BoomerBot or ask it serious questions for serious info!  With a Chat-GPT mock up in mind, the idea behind BoomerBot was to create a fun and useful chatsite, where the AI has been trained to respond to you like a Baby Boomer would...for the the added laughter of course.  Think Scrappy.  Think Simple and User-Friendly.  New users can create an account and sign-up.  Existing users have a login.  Each user has a chat pane where they communicate with the AI.  Account options allow users to change their name, password, and delete their account also.  Fun fact: our super cool logo and background image were both created by AI!  Hoping everyone gets a kick out of BoomerBot as much as this group does.
 
-![BoomerBotLogoFinal](https://github.com/KfromtheChi/BoomerBot/assets/145291849/6cab385c-51a5-449e-9a2a-125044b759a7)
-
 ![Screen Recording 2023-12-21 at 8 59 38 AM](https://github.com/KfromtheChi/BoomerBot/assets/145854969/648369f0-5452-4b63-8847-159f1500368a)
+
+![BoomerBotLogoFinal](https://github.com/KfromtheChi/BoomerBot/assets/145291849/6cab385c-51a5-449e-9a2a-125044b759a7)
 
 ### Coding Challenges
 1. Chat logs for user chat history - and sadly they have become a stretch goal.
