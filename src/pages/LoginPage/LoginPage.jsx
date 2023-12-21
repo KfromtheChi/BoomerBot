@@ -18,7 +18,7 @@ export default function LoginPage({ setUser }) {
         {login ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
         <p>
           {login ? "Don't have an account? " : "Already have an account? "}
-          <button onClick={toggleForm}>{login ? "Sign Up" : "Login"}</button>
+          <button className='page-btn' onClick={toggleForm}>{login ? "Sign Up" : "Login"}</button>
         </p>
       </div>
     </main>

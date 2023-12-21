@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { updatePassword } from '../../../utilities/users-service';
+import './ChangePassword.css'
+import { updatePassword } from '../../../../utilities/users-service';
 
 //change password page functionality - responsible for taking new password and sending it to the server.
 export default function ChangePasswordPage({ setUser }) {
@@ -40,21 +41,25 @@ export default function ChangePasswordPage({ setUser }) {
 
     // change password form
     return (
-        <div>
-            <h1>Change Password</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Old Password:
-                    <input type="password" value={oldPassword} onChange={handleOldChange} />
-                </label>
-                <label>
-                    New Password:
-                    <input type="password" value={newPassword} onChange={handleNewChange} />
-                </label>
-                <button type="submit">Change Password</button>
-            </form>
-            {successMessage && <div className="success-message">{successMessage}</div>}
-            {errorMessage && <div className="error-message">{errorMessage}</div>}
+    <div className="form-container2">
+        <div className="changePassword">
+            <div className="password-form">
+                <h2 className='pass-header'>Change Password</h2>
+                <form onSubmit={handleSubmit} className='form-password'>
+                    <label className='label'>
+                        Enter Old Password:
+                        <input type="password" value={oldPassword} className="form-input" onChange={handleOldChange} />
+                    </label><br />
+                    <label className='label1'>
+                        Enter New Password:
+                        <input type="password" value={newPassword} className="form-input" onChange={handleNewChange} />
+                    </label>
+                    <button type="submit">Change Password</button>
+                </form>
+                {successMessage && <div className="success-message">{successMessage}</div>}
+                {errorMessage && <div className="error-message">{errorMessage}</div>}
+            </div>
         </div>
+    </div>
     );
 };

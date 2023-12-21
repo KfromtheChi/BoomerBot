@@ -1,7 +1,8 @@
 import { useState } from 'react';
 // useNavigate() is a hook that allows us to navigate to a different route - part of the react router dom package, needed for delete account
 import { useNavigate } from 'react-router-dom';
-import { deleteAccount } from '../../../utilities/users-service';
+import { deleteAccount } from '../../../../utilities/users-service';
+import './DeleteAccount.css';
 
 export default function DeleteAccountPage({ setUser }) {
     // Show the confirmation form when delete button is clicked
@@ -39,16 +40,18 @@ export default function DeleteAccountPage({ setUser }) {
 
     return (
         <div className="delete-account">
-            <h1>Delete User Account</h1>
-            <button type="submit" onClick={handleConfirmation}>Delete</button>
+            <div className="delete-container">
+                <h2 className="delete-header">Delete User Account</h2>
+                <button type="submit" onClick={handleConfirmation}>Delete</button>
 
-            {showConfirmation && (
-            <form action="" method="DELETE" onSubmit={handleDelete}>
-                <h4>Are you sure you want to delete your account?</h4>
-                <button type="submit">Yes - Delete!</button>
-                <button type="button" onClick={handleCancel}>Cancel</button>
-            </form>
-            )}
+                {showConfirmation && (
+                <form action="" method="DELETE" className="delete-form" onSubmit={handleDelete}>
+                    <h4>Are you sure you want to delete your account?</h4>
+                    <button type="submit">Yes - Delete!</button>
+                    <button type="button" onClick={handleCancel}>Cancel</button>
+                </form>
+                )}
+            </div>
         </div>
     );
 };
